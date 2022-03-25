@@ -1,33 +1,29 @@
 $yellow: #ffcd05;
 /* Fonts */
 @font-face {
-  font-family: "Geograph";
-  src: url("assets/fonts/Geograph-Regular.woff2") format("woff2"),
-    url("assets/fonts/Geograph-Regular.woff") format("woff");
+  font-family: 'Geograph';
+  src: url('assets/fonts/Geograph-Regular.woff2') format('woff2'), url('assets/fonts/Geograph-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Geograph";
-  src: url("../fonts/Geograph-Medium.woff2") format("woff2"),
-    url("../fonts/Geograph-Medium.woff") format("woff");
+  font-family: 'Geograph';
+  src: url('../fonts/Geograph-Medium.woff2') format('woff2'), url('../fonts/Geograph-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Geograph";
-  src: url("../fonts/Geograph-Bold.woff2") format("woff2"),
-    url("../fonts/Geograph-Bold.woff") format("woff");
+  font-family: 'Geograph';
+  src: url('../fonts/Geograph-Bold.woff2') format('woff2'), url('../fonts/Geograph-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "ITC Souvenir Std";
-  src: url("../fonts/SouvenirStd-Medium.woff2") format("woff2"),
-    url("../fonts/SouvenirStd-Medium.woff") format("woff");
+  font-family: 'ITC Souvenir Std';
+  src: url('../fonts/SouvenirStd-Medium.woff2') format('woff2'), url('../fonts/SouvenirStd-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -41,14 +37,14 @@ img {
   max-width: 100%;
 }
 body {
-  background: url("../imgs/yt1s.com\ -\ Becoming\ Cousteau\ Official\ Trailer\ \ National\ Geographic\ Documentary\ Films_2.png");
+  background: url('../imgs/yt1s.com\ -\ Becoming\ Cousteau\ Official\ Trailer\ \ National\ Geographic\ Documentary\ Films_2.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   width: 100%;
   color: #fff;
-  font-family: "Geograph", sans-serif;
+  font-family: 'Geograph', sans-serif;
 }
 .container {
   width: 100%;
@@ -81,38 +77,61 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 2rem 3rem;
-
+  padding: 3rem 3rem;
+  .empty_div {
+    flex: 1;
+  }
   .header-text {
-    flex: 0.740;
+    flex: 1;
     display: flex;
     justify-content: end;
     align-items: center;
     text-align: center;
 
     p {
-      font-family: "Geograph", sans-serif;
+      font-family: 'Geograph', sans-serif;
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1.61rem;
     }
   }
   .logo {
-    flex: 0.5;
+    flex: 1;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 3.5rem;
+    gap: 2.3rem;
+    margin-right: 0.8rem;
 
     img {
-      width: 6.5rem;
+      width: 8.5rem;
+    }
+    .disney-logo {
+      width: 6.5rem !important;
     }
   }
 
-  @media screen and(max-width: 900px) {
+  @media screen and(max-width: 1200px) {
+    .header-text {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    .logo {
+      margin-right: 0;
+      img {
+        width: 7.5rem;
+      }
+      .disney-logo {
+        width: 6.5rem !important;
+      }
+    }
+  }
+  @media screen and(max-width: 992px) {
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
+
     .header-text {
       order: 2;
     }
@@ -132,7 +151,7 @@ body {
 }
 .section {
   width: 100%;
-
+  padding: 0 2.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -143,18 +162,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 
-    font-family: "Geograph", sans-serif;
+    font-family: 'Geograph', sans-serif;
 
     p {
       text-transform: uppercase;
       text-align: center;
+      font-size: 24px;
     }
     h1 {
       font-weight: 500;
-      font-size: 2.5rem;
+      font-size: 4rem;
     }
+  }
+  .right-timer {
+    justify-content: right !important;
   }
 
   .mid-sec {
@@ -163,16 +186,48 @@ body {
     align-items: center;
     justify-content: center;
     .cousteau-text {
-      padding: 1rem;
+      padding: 2rem 0;
       width: 100%;
       text-align: center;
 
       img {
-        width: 80% !important;
+        width: 82% !important;
       }
     }
   }
 
+  @media screen and (max-width: 1400px) {
+    .mid-sec {
+      img {
+        width: 90% !important;
+      }
+    }
+    .left-timer,
+    .right-timer {
+      p {
+        font-size: 1.1rem !important;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .mid-sec {
+      img {
+        width: 100% !important;
+      }
+    }
+    .left-timer,
+    .right-timer {
+      p {
+        font-size: 0.7rem !important;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
@@ -213,23 +268,26 @@ body {
   input,
   button {
     width: 40%;
-    padding: 1.4rem 2rem;
+    height: 100%;
+    padding: 1rem 2rem;
     outline: none;
     border: 1px solid $yellow;
-    border-radius: 0.42rem;
+    border-radius: 0.62rem;
     text-transform: uppercase;
+    font-size: 1.2rem;
   }
   .input-group {
-    width: 50%;
+    width: 45%;
+    height: 5.5rem;
     display: flex;
     justify-content: center;
-    column-gap: 0.7rem;
+    column-gap: 0.9rem;
 
     button {
       background-color: $yellow;
       transition: all 0.3s ease;
       cursor: pointer;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 600;
 
       &:hover {
@@ -243,7 +301,7 @@ body {
       &::placeholder {
         text-align: center;
         letter-spacing: 0.1rem;
-        font-size: 0.6rem;
+        font-size: 1rem;
         font-weight: 600;
         color: #000;
         transition: all 0.2s ease;
@@ -252,17 +310,49 @@ body {
         color: gray !important;
       }
     }
-
-    @media screen and(max-width : 900px) {
-      width: 100%;
+    @media screen and(max-width : 1400px) {
+      input{
+        &::placeholder{
+          font-size: 0.8rem;
+        }
+      }
+      
     }
-    @media screen and (max-width: 490px) {
+ @media screen and (max-width:1200px) {
+   
+     width: 60%;
+
+     button , input{
+       width: 50% !important;
+     }
+    
+   
+ }
+    @media screen and(max-width : 900px) {
+      width: 100%; 
+      input ::placeholder{
+       font-size: 0.7rem;
+     }
+    }
+    @media screen and (max-width: 768px) {
+      height: 6.6rem;
+      width: 100%;
       flex-direction: column;
       row-gap: 1rem;
 
       input,
       button {
-        width: 100%;
+        width: 100% !important;
+      }
+    }
+    @media screen and (max-width: 490px) {
+      width: 100%;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      input,
+      button {
+        width: 100% !important;
       }
     }
   }
@@ -275,7 +365,7 @@ body {
   justify-content: center;
   align-items: center;
   .logo-wrapper {
-    width: 50%;
+    // width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -284,19 +374,24 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 19%;
       img {
-        width: 80%;
+        width: 100%;
+        margin: 0 0.5rem;
       }
+    }
+    .logo-tiff {
+      width: 9%;
     }
     .logo-text-wrapper {
       display: flex;
-      font-family: "ITC Souvenir Std";
+      font-family: 'ITC Souvenir Std';
     }
     .text-logo1 {
       margin-right: 1rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       font-weight: 500;
     }
     @media screen and (max-width: 900px) {
@@ -317,13 +412,24 @@ body {
 
       .logo-text-wrapper {
         flex-direction: column;
+
+        .logo-tiff {
+          width: 12% !important;
+        }
+        .logo-film{
+          width: 21rem;
+        }
+      }
+      p {
+        font-size: 1.3rem;
+        font-weight: 500;
       }
     }
   }
 }
 
 .footer {
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -351,10 +457,10 @@ body {
   .mid-footer {
     flex-basis: 40%;
     p {
-      font-family: "Geograph";
+      font-family: 'Geograph';
       text-align: center;
       letter-spacing: 0.2rem;
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
   .right-footer {
@@ -362,7 +468,8 @@ body {
     display: flex;
 
     img {
-      width: 110px;
+      width: 13rem;
+      padding-left: 4rem;
     }
   }
 
@@ -380,20 +487,33 @@ body {
       justify-content: center;
       align-items: center;
     }
+    .right-footer {
+  
+      img {
+       
+        padding-left: 0rem;
+      }
+    }
   }
 
   @media screen and(max-width : 760px) {
     .left-footer {
-      flex-basis: 60% !important;
+      flex-basis: 70% !important;
       .footer-logo-wrapper {
-        img:nth-child(2) {
+        img:nth-child(1) {
           width: 100px !important;
+        }
+        img:nth-child(2) {
+          width: 140px !important;
         }
       }
     }
     .right-footer {
       justify-content: left !important;
-      flex-basis: 40% !important;
+      flex-basis: 30% !important;
+img{
+  max-width: 6rem !important;
+}
     }
   }
 }

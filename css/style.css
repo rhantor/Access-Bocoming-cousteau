@@ -1,6 +1,6 @@
 /* Fonts */
 @font-face {
-  font-family: "Geograph";
+  font-family: 'Geograph';
   src: url("assets/fonts/Geograph-Regular.woff2") format("woff2"), url("assets/fonts/Geograph-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "Geograph";
+  font-family: 'Geograph';
   src: url("../fonts/Geograph-Medium.woff2") format("woff2"), url("../fonts/Geograph-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: "Geograph";
+  font-family: 'Geograph';
   src: url("../fonts/Geograph-Bold.woff2") format("woff2"), url("../fonts/Geograph-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-  font-family: "ITC Souvenir Std";
+  font-family: 'ITC Souvenir Std';
   src: url("../fonts/SouvenirStd-Medium.woff2") format("woff2"), url("../fonts/SouvenirStd-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
   width: 100%;
   color: #fff;
-  font-family: "Geograph", sans-serif;
+  font-family: 'Geograph', sans-serif;
 }
 
 .container {
@@ -99,13 +99,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 3rem;
+  padding: 3rem 3rem;
+}
+
+.header .empty_div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .header .header-text {
-  -webkit-box-flex: 0.740;
-      -ms-flex: 0.740;
-          flex: 0.740;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,15 +125,15 @@ body {
 }
 
 .header .header-text p {
-  font-family: "Geograph", sans-serif;
+  font-family: 'Geograph', sans-serif;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.61rem;
 }
 
 .header .logo {
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,14 +144,34 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  gap: 3.5rem;
+  gap: 2.3rem;
+  margin-right: 0.8rem;
 }
 
 .header .logo img {
-  width: 6.5rem;
+  width: 8.5rem;
 }
 
-@media screen and (max-width: 900px) {
+.header .logo .disney-logo {
+  width: 6.5rem !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .header .header-text p {
+    font-size: 1.1rem;
+  }
+  .header .logo {
+    margin-right: 0;
+  }
+  .header .logo img {
+    width: 7.5rem;
+  }
+  .header .logo .disney-logo {
+    width: 6.5rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -182,6 +208,7 @@ body {
 
 .section {
   width: 100%;
+  padding: 0 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,20 +237,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 1.5rem;
-  font-family: "Geograph", sans-serif;
+  margin-bottom: 1.5rem;
+  font-family: 'Geograph', sans-serif;
 }
 
 .section .left-timer p,
 .section .right-timer p {
   text-transform: uppercase;
   text-align: center;
+  font-size: 24px;
 }
 
 .section .left-timer h1,
 .section .right-timer h1 {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 4rem;
+}
+
+.section .right-timer {
+  -webkit-box-pack: right !important;
+      -ms-flex-pack: right !important;
+          justify-content: right !important;
 }
 
 .section .mid-sec {
@@ -241,13 +275,41 @@ body {
 }
 
 .section .mid-sec .cousteau-text {
-  padding: 1rem;
+  padding: 2rem 0;
   width: 100%;
   text-align: center;
 }
 
 .section .mid-sec .cousteau-text img {
-  width: 80% !important;
+  width: 82% !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .section .mid-sec img {
+    width: 90% !important;
+  }
+  .section .left-timer p,
+  .section .right-timer p {
+    font-size: 1.1rem !important;
+  }
+  .section .left-timer h1,
+  .section .right-timer h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section .mid-sec img {
+    width: 100% !important;
+  }
+  .section .left-timer p,
+  .section .right-timer p {
+    font-size: 0.7rem !important;
+  }
+  .section .left-timer h1,
+  .section .right-timer h1 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -308,23 +370,26 @@ body {
 .form input,
 .form button {
   width: 40%;
-  padding: 1.4rem 2rem;
+  height: 100%;
+  padding: 1rem 2rem;
   outline: none;
   border: 1px solid #ffcd05;
-  border-radius: 0.42rem;
+  border-radius: 0.62rem;
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 .form .input-group {
-  width: 50%;
+  width: 45%;
+  height: 5.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 0.7rem;
-          column-gap: 0.7rem;
+  -webkit-column-gap: 0.9rem;
+          column-gap: 0.9rem;
 }
 
 .form .input-group button {
@@ -332,7 +397,7 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -349,7 +414,7 @@ body {
 .form .input-group input::-webkit-input-placeholder {
   text-align: center;
   letter-spacing: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   -webkit-transition: all 0.2s ease;
@@ -359,7 +424,7 @@ body {
 .form .input-group input:-ms-input-placeholder {
   text-align: center;
   letter-spacing: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   -webkit-transition: all 0.2s ease;
@@ -369,7 +434,7 @@ body {
 .form .input-group input::-ms-input-placeholder {
   text-align: center;
   letter-spacing: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   -webkit-transition: all 0.2s ease;
@@ -379,7 +444,7 @@ body {
 .form .input-group input::placeholder {
   text-align: center;
   letter-spacing: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   -webkit-transition: all 0.2s ease;
@@ -402,14 +467,52 @@ body {
   color: gray !important;
 }
 
+@media screen and (max-width: 1400px) {
+  .form .input-group input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .form .input-group input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .form .input-group input::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .form .input-group input::placeholder {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form .input-group {
+    width: 60%;
+  }
+  .form .input-group button, .form .input-group input {
+    width: 50% !important;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .form .input-group {
     width: 100%;
   }
+  .form .input-group input ::-webkit-input-placeholder {
+    font-size: 0.7rem;
+  }
+  .form .input-group input :-ms-input-placeholder {
+    font-size: 0.7rem;
+  }
+  .form .input-group input ::-ms-input-placeholder {
+    font-size: 0.7rem;
+  }
+  .form .input-group input ::placeholder {
+    font-size: 0.7rem;
+  }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 768px) {
   .form .input-group {
+    height: 6.6rem;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -418,7 +521,22 @@ body {
   }
   .form .input-group input,
   .form .input-group button {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .form .input-group {
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 1rem;
+  }
+  .form .input-group input,
+  .form .input-group button {
+    width: 100% !important;
   }
 }
 
@@ -437,7 +555,6 @@ body {
 }
 
 .logo-banner .logo-wrapper {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,18 +577,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 19%;
 }
 
 .logo-banner .logo-wrapper .logo-tiff img,
 .logo-banner .logo-wrapper .logo-film img {
-  width: 80%;
+  width: 100%;
+  margin: 0 0.5rem;
+}
+
+.logo-banner .logo-wrapper .logo-tiff {
+  width: 9%;
 }
 
 .logo-banner .logo-wrapper .logo-text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "ITC Souvenir Std";
+  font-family: 'ITC Souvenir Std';
 }
 
 .logo-banner .logo-wrapper .text-logo1 {
@@ -479,7 +602,7 @@ body {
 }
 
 .logo-banner .logo-wrapper p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -511,10 +634,20 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .logo-banner .logo-wrapper .logo-text-wrapper .logo-tiff {
+    width: 12% !important;
+  }
+  .logo-banner .logo-wrapper .logo-text-wrapper .logo-film {
+    width: 21rem;
+  }
+  .logo-banner .logo-wrapper p {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
 }
 
 .footer {
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,10 +702,10 @@ body {
 }
 
 .footer .mid-footer p {
-  font-family: "Geograph";
+  font-family: 'Geograph';
   text-align: center;
   letter-spacing: 0.2rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .footer .right-footer {
@@ -584,7 +717,8 @@ body {
 }
 
 .footer .right-footer img {
-  width: 110px;
+  width: 13rem;
+  padding-left: 4rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -613,22 +747,31 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .footer .right-footer img {
+    padding-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
   .footer .left-footer {
-    -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important;
+    -ms-flex-preferred-size: 70% !important;
+        flex-basis: 70% !important;
+  }
+  .footer .left-footer .footer-logo-wrapper img:nth-child(1) {
+    width: 100px !important;
   }
   .footer .left-footer .footer-logo-wrapper img:nth-child(2) {
-    width: 100px !important;
+    width: 140px !important;
   }
   .footer .right-footer {
     -webkit-box-pack: left !important;
         -ms-flex-pack: left !important;
             justify-content: left !important;
-    -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important;
+    -ms-flex-preferred-size: 30% !important;
+        flex-basis: 30% !important;
+  }
+  .footer .right-footer img {
+    max-width: 6rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
