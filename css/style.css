@@ -1,0 +1,634 @@
+/* Fonts */
+@font-face {
+  font-family: "Geograph";
+  src: url("assets/fonts/Geograph-Regular.woff2") format("woff2"), url("assets/fonts/Geograph-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geograph";
+  src: url("../fonts/Geograph-Medium.woff2") format("woff2"), url("../fonts/Geograph-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geograph";
+  src: url("../fonts/Geograph-Bold.woff2") format("woff2"), url("../fonts/Geograph-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Souvenir Std";
+  src: url("../fonts/SouvenirStd-Medium.woff2") format("woff2"), url("../fonts/SouvenirStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: url("../imgs/yt1s.com - Becoming Cousteau Official Trailer  National Geographic Documentary Films_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  font-family: "Geograph", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .overlay {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3rem;
+}
+
+.header .header-text {
+  -webkit-box-flex: 0.740;
+      -ms-flex: 0.740;
+          flex: 0.740;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.header .header-text p {
+  font-family: "Geograph", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.header .logo {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 3.5rem;
+}
+
+.header .logo img {
+  width: 6.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+  .header .header-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .header .logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header .header-text p {
+    font-size: 1rem;
+  }
+}
+
+.section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section .left-timer,
+.section .right-timer {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.5rem;
+  font-family: "Geograph", sans-serif;
+}
+
+.section .left-timer p,
+.section .right-timer p {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section .left-timer h1,
+.section .right-timer h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.section .mid-sec {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section .mid-sec .cousteau-text {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.section .mid-sec .cousteau-text img {
+  width: 80% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .mid-sec {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .section .mid-sec img {
+    width: 80% !important;
+  }
+  .section .left-timer,
+  .section .right-timer {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .section .left-timer p,
+  .section .right-timer p {
+    font-size: 0.8rem;
+  }
+  .section .left-timer h1,
+  .section .right-timer h1 {
+    font-size: 1.7rem;
+  }
+}
+
+.form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0;
+}
+
+.form input,
+.form button {
+  width: 40%;
+  padding: 1.4rem 2rem;
+  outline: none;
+  border: 1px solid #ffcd05;
+  border-radius: 0.42rem;
+  text-transform: uppercase;
+}
+
+.form .input-group {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 0.7rem;
+          column-gap: 0.7rem;
+}
+
+.form .input-group button {
+  background-color: #ffcd05;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.form .input-group button:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.form .input-group input {
+  text-align: center;
+}
+
+.form .input-group input::-webkit-input-placeholder {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form .input-group input:-ms-input-placeholder {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form .input-group input::-ms-input-placeholder {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form .input-group input::placeholder {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form .input-group input:focus::-webkit-input-placeholder {
+  color: gray !important;
+}
+
+.form .input-group input:focus:-ms-input-placeholder {
+  color: gray !important;
+}
+
+.form .input-group input:focus::-ms-input-placeholder {
+  color: gray !important;
+}
+
+.form .input-group input:focus::placeholder {
+  color: gray !important;
+}
+
+@media screen and (max-width: 900px) {
+  .form .input-group {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .form .input-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 1rem;
+  }
+  .form .input-group input,
+  .form .input-group button {
+    width: 100%;
+  }
+}
+
+.logo-banner {
+  width: 100%;
+  padding: 1rem 0 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-banner .logo-wrapper {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.logo-banner .logo-wrapper .logo-tiff,
+.logo-banner .logo-wrapper .logo-film {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-banner .logo-wrapper .logo-tiff img,
+.logo-banner .logo-wrapper .logo-film img {
+  width: 80%;
+}
+
+.logo-banner .logo-wrapper .logo-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "ITC Souvenir Std";
+}
+
+.logo-banner .logo-wrapper .text-logo1 {
+  margin-right: 1rem;
+}
+
+.logo-banner .logo-wrapper p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .logo-banner .logo-wrapper {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  .logo-banner .logo-wrapper img {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-banner .logo-wrapper {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .logo-banner .logo-wrapper img {
+    width: 80% !important;
+  }
+  .logo-banner .logo-wrapper .logo-text-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer {
+  padding: 1rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  row-gap: 1.5rem;
+}
+
+.footer .left-footer {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 2rem;
+}
+
+.footer .left-footer .footer-logo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+.footer .left-footer .footer-logo-wrapper img {
+  width: 40% !important;
+}
+
+.footer .left-footer .footer-logo-wrapper img:nth-child(1) {
+  width: 100px !important;
+}
+
+.footer .mid-footer {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.footer .mid-footer p {
+  font-family: "Geograph";
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
+
+.footer .right-footer {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .right-footer img {
+  width: 110px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .mid-footer {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer .left-footer,
+  .footer .right-footer {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer .left-footer {
+    -ms-flex-preferred-size: 60% !important;
+        flex-basis: 60% !important;
+  }
+  .footer .left-footer .footer-logo-wrapper img:nth-child(2) {
+    width: 100px !important;
+  }
+  .footer .right-footer {
+    -webkit-box-pack: left !important;
+        -ms-flex-pack: left !important;
+            justify-content: left !important;
+    -ms-flex-preferred-size: 40% !important;
+        flex-basis: 40% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

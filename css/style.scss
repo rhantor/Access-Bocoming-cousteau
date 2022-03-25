@@ -1,0 +1,399 @@
+$yellow: #ffcd05;
+/* Fonts */
+@font-face {
+  font-family: "Geograph";
+  src: url("assets/fonts/Geograph-Regular.woff2") format("woff2"),
+    url("assets/fonts/Geograph-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geograph";
+  src: url("../fonts/Geograph-Medium.woff2") format("woff2"),
+    url("../fonts/Geograph-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geograph";
+  src: url("../fonts/Geograph-Bold.woff2") format("woff2"),
+    url("../fonts/Geograph-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Souvenir Std";
+  src: url("../fonts/SouvenirStd-Medium.woff2") format("woff2"),
+    url("../fonts/SouvenirStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background: url("../imgs/yt1s.com\ -\ Becoming\ Cousteau\ Official\ Trailer\ \ National\ Geographic\ Documentary\ Films_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  font-family: "Geograph", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 2rem 3rem;
+
+  .header-text {
+    flex: 0.740;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+
+    p {
+      font-family: "Geograph", sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+  .logo {
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3.5rem;
+
+    img {
+      width: 6.5rem;
+    }
+  }
+
+  @media screen and(max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    .header-text {
+      order: 2;
+    }
+    .logo {
+      order: 1;
+      flex: 1;
+      justify-content: center;
+    }
+  }
+  @media screen and(max-width: 420px) {
+    .header-text {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.section {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .left-timer,
+  .right-timer {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+
+    font-family: "Geograph", sans-serif;
+
+    p {
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+    }
+  }
+
+  .mid-sec {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cousteau-text {
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 80% !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    .mid-sec {
+      flex-basis: 100%;
+      order: 1;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 80% !important;
+      }
+    }
+    .left-timer,
+    .right-timer {
+      order: 2;
+      flex-basis: 50%;
+    }
+  }
+  @media screen and (max-width: 490px) {
+    .left-timer,
+    .right-timer {
+      p {
+        font-size: 0.8rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  input,
+  button {
+    width: 40%;
+    padding: 1.4rem 2rem;
+    outline: none;
+    border: 1px solid $yellow;
+    border-radius: 0.42rem;
+    text-transform: uppercase;
+  }
+  .input-group {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.7rem;
+
+    button {
+      background-color: $yellow;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: 600;
+
+      &:hover {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+      }
+    }
+    input {
+      text-align: center;
+      &::placeholder {
+        text-align: center;
+        letter-spacing: 0.1rem;
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: #000;
+        transition: all 0.2s ease;
+      }
+      &:focus::placeholder {
+        color: gray !important;
+      }
+    }
+
+    @media screen and(max-width : 900px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 490px) {
+      flex-direction: column;
+      row-gap: 1rem;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.logo-banner {
+  width: 100%;
+  padding: 1rem 0 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .logo-tiff,
+    .logo-film {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+      }
+    }
+    .logo-text-wrapper {
+      display: flex;
+      font-family: "ITC Souvenir Std";
+    }
+    .text-logo1 {
+      margin-right: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    @media screen and (max-width: 900px) {
+      justify-content: space-evenly;
+      width: 100%;
+
+      img {
+        width: 100% !important;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      justify-content: space-evenly;
+
+      img {
+        width: 80% !important;
+      }
+
+      .logo-text-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  row-gap: 1.5rem;
+  .left-footer {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 2rem;
+    .footer-logo-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: 100%;
+      img {
+        width: 40% !important ;
+      }
+      img:nth-child(1) {
+        width: 100px !important;
+      }
+    }
+  }
+  .mid-footer {
+    flex-basis: 40%;
+    p {
+      font-family: "Geograph";
+      text-align: center;
+      letter-spacing: 0.2rem;
+      font-size: 1rem;
+    }
+  }
+  .right-footer {
+    flex-basis: 30%;
+    display: flex;
+
+    img {
+      width: 110px;
+    }
+  }
+
+  @media screen and(max-width : 900px) {
+    flex-wrap: wrap;
+    .mid-footer {
+      order: 2;
+      flex-basis: 100%;
+    }
+
+    .left-footer,
+    .right-footer {
+      order: 1;
+      flex-basis: 45%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and(max-width : 760px) {
+    .left-footer {
+      flex-basis: 60% !important;
+      .footer-logo-wrapper {
+        img:nth-child(2) {
+          width: 100px !important;
+        }
+      }
+    }
+    .right-footer {
+      justify-content: left !important;
+      flex-basis: 40% !important;
+    }
+  }
+}
